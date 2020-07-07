@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+  <title>Process Portal - Work</title>
+
+  <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/bpm.css" />
+
+</head>
+
+<body>
+
+  <div id="bpm_container">
+
+    <div id="bpm_leftcol">
+      <img src="{{ pageInfo.rootPath }}/img/bg-left-menu-top.png" />
+      {% block leftmenu %}{% endblock %}
+    </div><!-- //bpm_leftcol -->
+
+    <div id="bpm_rightcol">
+
+      <div id="bpm_header">
+
+        <div id="bpm_header_left">
+          <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-left.png" alt="" />
+        </div><!-- //bpm_header -->
+
+        <div id="bpm_header_centre">
+          <h1>{% block headertext %}{% endblock %}</h1>
+        </div><!-- //bpm_header -->
+
+        <div id="bpm_header_right">
+          <div id="bpm_task_count">
+            {% block taskcount %}{% endblock %}
+          </div>
+          <div id="bpm_task_total">
+            Total<br>
+            Open
+          </div>
+          <div id="bpm_task_summary">
+            {% block ontrack %}{% endblock %} On Track<br>
+            0 At Risk<br>
+            0 Overdue
+          </div>
+          <div id="bpm_task_menu">
+            <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-right.png" alt="">
+          </div>
+
+
+        </div><!-- //bpm_header -->
+
+      </div><!-- //bpm_header -->
+
+      <div id="bpm_page">
+
+        <table id="bpm_search_table">
+          <tr>
+            <td class="searchtext">Enter search text...</td>
+            <td class="searchicon"><img src="{{ pageInfo.rootPath }}/img/bg-search-icon.png"></td>
+            <td class="searchiconmultiple"><img src="{{ pageInfo.rootPath }}/img/bg-search-icon-multiple.png"></td>
+          </tr>
+        </table>
+
+        <table id="bpm_task_table">
+          <tr>
+            <th></th>
+            <th>Task subject <span class="order"> </span></th>
+            <th>Instance name <span class="order"> </span></th>
+            <th>Task status <span class="order"> </span></th>
+            <th>Name <span class="order"> </span></th>
+            <th>Allocated <span class="order"> </span></th>
+            <th>Priority <span class="order"> </span></th>
+          </tr>
+
+          {% block page %}{% endblock %}
+
+        </table>
+
+          <div id="pagination">
+            <table id="bpm_pagination_table">
+              <tr>
+                <td class="pageitems"><img src="{{ pageInfo.rootPath }}/img/bg-footer-pager-left.png" alt=""></td>
+                <td class="pagecount">1 -8 of 8 items</td>
+              </tr>
+            </table>
+          </div>
+
+      </div><!-- //bpm_page -->
+
+    </div><!-- //bpm_rightcol -->
+
+  </div><!-- //bpm_container -->
+
+
+
+
+
+</body>
+</html>

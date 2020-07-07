@@ -1,0 +1,349 @@
+---
+title: Check needed - Tresco Stores Ltd - survey 0023 - 202004
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+
+{% set pageWidthCols="8" %}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+{% from "components/collapsible/_macro.njk" import onsCollapsible %}
+{% from "components/textarea/_macro.njk" import onsTextarea %}
+
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowList %}
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowGrid %}
+{% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+{% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
+{% from "prototypes/take-on-1/components/history-table/_macro.njk" import historyTable %}
+
+{% from "prototypes/take-on-1/data/LU-6785-Periods-json.dta" import questions %}
+
+
+
+
+{% block main %}
+
+
+
+
+
+    <h1 class="companyName">
+    Q22 Alcohol, confectionery, tobacco
+    </h1>
+
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="Form details" aria-label="Form details">
+                    <dt class="metadata__term grid__col col-2@m u-mt-no">Reference:</dt>
+                    <dd class="metadata__value grid__col col-10@m u-mt-no">49900265143</dd>
+                    <dt class="metadata__term grid__col col-2@m u-mt-no">Survey:</dt>
+                    <dd class="metadata__value grid__col col-10@m u-mt-no">Retail Sales Index (RSI) 023</dd>
+      </dl>
+
+
+        {% from "components/button/_macro.njk" import onsButton %}
+        {{
+            onsButton({
+                "type": 'button',
+                "text": 'Back to main form',
+                "classes": 'btn--secondary btn--small u-mb-l',
+                "url": "/prototypes/take-on-1/v3/questionlist-rsi.html"
+            })
+        }}
+
+
+
+<section role="region" class="tabs">
+
+  <h2 class="tabs__title">Form and previous data for Q22</h2>
+
+  <ul class="tabs__list">
+
+    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: form data" data-ga-label="Show: form data">Form data</a></li>
+
+    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: previous data" data-ga-label="Show: previous data">Previous data</a></li>
+
+    <li id="tabId3Item" class="tab__list-item"><a href="#tabId3" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: graph of previous data" data-ga-label="Show: graph of previous data">Graph of previous data</a></li>
+
+  </ul>
+
+  <section id="tabId1" class="tabs__panel">
+
+  <h3>Form data for Q22</h3>
+
+    <div class="panel panel--error panel--simple">
+        <div class="panel__body">
+          <fieldset>
+            <legend class="u-vh">
+                {{ q.Question }} validations and overrides
+            </legend>
+
+          <p class="panel__error u-mb-no">
+            <strong>This has changed since the last submission</strong>
+          </p>
+
+
+    {% set questionParams =
+        {
+            "id": 1,
+            "name": 2,
+            "label": {
+                "text": "Q22 Alcohol, confectionery, tobacco"
+            },
+            "value": 54000,
+            "classes": classes
+        }
+     %}
+
+
+    {{
+      onsTextarea( questionParams ) if q.Type == "Textarea" else onsInput( questionParams )
+    }}
+
+        </div>
+      </div>
+
+
+    {% from "components/radios/_macro.njk" import onsRadios %}
+{{
+    onsRadios({
+        "legend": "Actions",
+        "name": "food",
+        "radios": [
+            {
+                "id": "Override",
+                "label": {
+                    "text": "Override"
+                },
+                "value": "Override"
+            },
+            {
+                "id": "Edit",
+                "label": {
+                    "text": "Edit"
+                },
+                "value": "Edit"
+            },
+            {
+                "id": "estimated",
+                "label": {
+                    "text": "Add estimated value"
+                },
+                "value": "estimated"
+            }
+        ]
+    })
+}}
+
+
+{% from "components/select/_macro.njk" import onsSelect %}
+{{
+    onsSelect({
+        "id": "select",
+        "name": "select",
+        "classes": "u-mb-l",
+        "label": {
+            "text": "Reason"
+        },
+        "options": [
+            {
+                "value": "",
+                "text": "Select a reason",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "value": "Informed decision",
+                "text": "Informed decision"
+            },
+            {
+                "value": "Conversation with business",
+                "text": "Conversation with business"
+            },
+            {
+                "value": "RAP advised clearance",
+                "text": "RAP advised clearance"
+            },
+            {
+                "value": "Internet increase",
+                "text": "Internet increase"
+            },
+            {
+                "value": "COVID-19",
+                "text": "COVID-19"
+            },
+            {
+                "value": "Re-class",
+                "text": "Re-class"
+            },
+            {
+                "value": "Zero return",
+                "text": "Zero return"
+            }
+        ]
+    })
+}}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{{
+    onsButton({
+        "text": 'Save and validate'
+    })
+}}
+
+
+  </section>
+
+
+  <!-- TAB ######################################################### -->
+
+  <section id="tabId2" class="tabs__panel">
+        <h3>Previous data for Q22</h3>
+
+        {% set foo = 0 %}
+
+        {% for q in questions %}
+
+            {% if q.RespondantFigure > foo %}
+
+                {% set foo = q.RespondantFigure %}
+                {# {{ foo }}  #}
+
+            {% endif %}
+
+        {% endfor %}
+
+
+    <table id="basic-table" class="table ">
+
+  <thead class="table__head">
+    <tr class="table__row">
+      <th scope="col" class="table__header table__header--numeric">Period</th>
+      <th scope="col" class="table__header table__header--numeric">Response</th>
+      <th scope="col" class="table__header table__header--numeric">Adjusted</th>
+      <th scope="col" class="table__header table__header--numeric">Period change</th>
+      <th scope="col" class="table__header table__header--numeric">Year change</th>
+      <th scope="col" class="table__header t_period_chart_col">Chart</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+
+     {% for q in questions %}
+
+
+
+
+            <tr class="table__row">
+
+
+
+            <td class="table__cell table__header--numeric">
+                {{ q.Period }}
+            </td>
+            <td class="table__cell table__header--numeric">
+                {{ q.RespondantFigure }}
+            </td>
+
+            <td class="table__cell table__header--numeric">
+                {{ q.AdjustedFigure }}
+            </td class="table__cell ">
+
+            <td class="table__cell table__header--numeric">
+
+                {% if q.PPChangeSign == "+" %}
+
+                    <span class = "to-value-positive">
+
+                {% else %}
+
+                    <span class = "to-value-negative">
+
+                {% endif %}
+
+                    {# {{ q.PPChangeSign }}{{ q.PPChangeValue }}% #}
+                    {{ q.PPChangeValue }}
+
+                </span>
+
+            </td class="table__cell table__header--numeric">
+
+            <td class="table__cell table__header--numeric">
+
+                {% if q.YoYPChangeSign == "+" %}
+
+                    <span class = "to-value-positive">
+
+                {% else %}
+
+                    <span class = "to-value-negative">
+
+                {% endif %}
+
+
+                {# {{ q.YoYPChangeSign }}{{ q.YoYPChangeValue }}% #}
+                {{ q.YoYPChangeValue }}
+
+
+                </span>
+
+            </td class="table__cell ">
+
+            <td class="table__cell table__header--numeric">
+
+
+                {% set perc = q.RespondantFigure/foo*100 %}
+
+
+                <div role="figure" aria-describedby="period-tg-1-{{period}}" class="to-u-bar-grid" style="width: {{perc}}%;"><span id="period-tg-1-{{period}}" class="u-vh">{{perc}}%</span></div>
+
+            </td class="table__cell " >
+
+        </tr>
+    {% endfor %}
+
+
+
+
+  </tbody>
+
+</table>
+
+
+
+        <a href="#" class="list__link ">
+            Previous
+        </a>
+        <p> </p>
+        <a href="#" class="list__link ">
+            Next
+        </a>
+
+  </section>
+
+  <!-- TAB ######################################################### -->
+
+  <section id="tabId3" class="tabs__panel">
+
+
+  {% include "prototypes/take-on-1/v3/graphs/rsi-graph.inc" %}
+
+  <h3>Graph of previous data for Q22</h3>
+
+    <div
+    id="chartContainer"
+    style="height: 480px; width: 823px;"
+    class="u-mt-l u-mb-xl">
+    </div>
+
+    <p>&nbsp;</p>
+
+  </section>
+
+</section>
+
+
+
+{% endblock %}

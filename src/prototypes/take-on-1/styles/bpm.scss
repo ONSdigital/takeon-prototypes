@@ -1,0 +1,249 @@
+/* Import ONS standard font Open Sans */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#bpm_container {
+  display: flex;
+  height: 100%;
+}
+
+#bpm_leftcol {
+  background-color: #231f20;
+  color: #ffffff;
+  width: 265px;
+  height: 99%;
+
+  ul {
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 8px 8px 8px 42px;
+        background-color: #505a5a;
+        border-top: solid 1px #61686a;
+        background-image: url('/prototypes/take-on-1/img/bg-left-menu-icon.png');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+      }
+    }
+  }
+}
+
+#bpm_rightcol {
+  width: 100%;
+  height: 100%;
+}
+
+#bpm_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #325c80;
+  color: #ffffff;
+  height: 60px;
+}
+
+#bpm_header_left {
+}
+
+#bpm_header_centre {
+  height: 60px;
+  background-image: url('/prototypes/take-on-1/img/bg-header-centre-icon.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  h1 {
+    font-size: 1.6em;
+    padding-top: 0px;
+  }
+}
+
+#bpm_header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  #bpm_task_count {
+    font-size: 2em;
+  }
+  #bpm_task_total {
+    font-size: 0.9em;
+    padding: 0 20px 0 10px;
+  }
+  #bpm_task_summary {
+    border-left: 1px solid #ffffff;
+    padding: 0 20px;
+    line-height: 1;
+  }
+}
+
+#bpm_page {
+}
+
+#bpm_search_table {
+  border-collapse: collapse;
+  width: 100%;
+  td {
+    border: 1px solid #d4d4d4;
+  }
+  td.searchtext {
+    color: #afafaf;
+    padding-left: 10px;
+    font-size: 0.9em;
+    width: 100%;
+  }
+  td.searchicon {
+    width: 20px;
+  }
+  td.searchiconmultiple {
+    width: 20px;
+  }
+}
+
+#bpm_task_table {
+  border-collapse: collapse;
+  width: 100%;
+  th {
+    text-align: left;
+    color: #000203;
+    padding: 4px 4px;
+    border: 1px solid #d4d4d4;
+    font-weight: 700;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(1, #fff));
+    /*
+    background: -ms-linear-gradient(bottom, #eee, #fff);
+    background: -moz-linear-gradient(center bottom, #eee 0, #fff 100%);
+    background: -o-linear-gradient(#fff, #eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    */
+    span.order {
+      display: inline-block;
+      width: 30px;
+      height: 15px;
+      float: right;
+      background-image: url('/prototypes/take-on-1/img/bg-task-order-icon.png');
+      background-repeat: no-repeat;
+      background-position: right 30%;
+    }
+  }
+  td {
+    color: #000203;
+    padding: 2px 4px;
+    border-right: 1px solid #d4d4d4;
+  }
+  td.icon {
+    background-color: #f0f0ee;
+    padding: 0 2px;
+  }
+  td.subject {
+    width: 17%;
+  }
+  td.instance {
+    width: 17%;
+  }
+  td.status {
+    width: 17%;
+  }
+  td.name {
+    width: 17%;
+  }
+  td.allocated {
+    width: 17%;
+  }
+  td.priority {
+    width: 17%;
+  }
+  a {
+    text-decoration: none;
+    color: #000203;
+  }
+  tr.odd {
+    background-color: #ffffff;
+  }
+  tr.even {
+    background-color: #f0f0ee;
+  }
+}
+
+#pagination {
+  border-top: 12px solid #f0f0ee;
+  position: absolute;
+  bottom: 0px;
+  width: calc(100% - 265px);
+  border-bottom: 4px;
+}
+
+#bpm_pagination_table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #d4d4d4;
+  td {
+    width: 50%;
+  }
+  td.pageitems {
+    text-align: left;
+  }
+  td.pagecount {
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+
+/* MODAL ============================================== */
+
+body.modalwindow {
+  background-color: #505a5a;
+  height: auto;
+}
+
+#bpm_modal_container {
+}
+
+#bpm_modal {
+  position: relative;
+  width: 595px;
+  height: 376px;
+  margin: 10% auto;
+  background-image: url('/prototypes/take-on-1/img/bg-modal-back.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  span {
+    display: block;
+    position: absolute;
+  }
+  span.modalstep {
+    top: 87px;
+    left: 73px;
+    padding-right: 100px;
+    background-color: #ffffff;
+  }
+  span.modalinstance {
+    font-size: 0.9em;
+    top: 110px;
+    left: 73px;
+    padding-right: 100px;
+    background-color: #ffffff;
+  }
+  span.modallink {
+    top: 326px;
+    left: 486px;
+    background-color: transparent;
+    width: 95px;
+    height: 35px;
+  }
+}

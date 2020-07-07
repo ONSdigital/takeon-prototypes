@@ -1,0 +1,32 @@
+{% macro onsSingleCheckbox(params) %}
+
+    <span class="checkbox js-password-toggle-wrap checkbox--toggle {{ params.spanclass }}">
+        <input
+            type="checkbox"
+            {% if params.id %}id="{{ params.id }}"{% endif %}
+            class="checkbox__input js-checkbox js-password-toggle to-u-bg-w"
+            value=""
+            {% if params.id %}name="{{ params.id }}"{% endif %}
+            {% if params.checked %} checked="checked"{% endif %}
+        >
+        <label {% if params.id %}id="sm_chk_{{ params.id }}"{% endif %} class="checkbox__label to-u-bg" for="{{ params.id }}">
+            {% if params.label %}{{ params.label }}{% else %} Enter a label {% endif %}
+            {% if params.accessibleLabel %}<span class="u-vh"> {{ params.accessibleLabel | lower }}</span>{% endif %}
+        </label>
+
+        {% if params.reason %}
+            <span class="checkbox__other u-p-no" id="other-checkbox-other-wrap">
+                <label class="label u-fs-s--b" for="other-textbox">Reason to accept or edit value</label>
+                <input
+                type="text"
+                id="other-textbox"
+                class="input input--text input-type__input  input--w-auto "
+                name="other-answer"
+                />
+            </span>
+
+        {% endif %}
+
+    </span>
+
+{% endmacro %}

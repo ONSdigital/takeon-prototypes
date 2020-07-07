@@ -1,0 +1,57 @@
+{% extends "page-templates/_template.njk" %}
+
+{% set containerClasses = "container--wide" %}  {# container--wide (1280px) container--full-width (fw) #}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/styles.css" />
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"
+  crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% set pageConfig = {
+    "cdn": "17.0.0",
+    "title": "Take-on prototype",
+    "wide": true,
+    "header": {
+        "title": "Check business survey forms",
+        "classes": "header--internal header--thin",
+        "logo": "ons-logo-white",
+        "logoAlt": "ONS",
+        "logoHref": "/prototypes/take-on-1"
+    },
+    "phase": {
+      "badge": "BETA",
+      "html": 'This is a work in progress',
+      "wide": true
+    },
+    "footer": {
+        "OGLLink": false,
+        "poweredBy": true
+    }
+} %}
+
+
+{% block pageContent %}
+    {% block preMain %}{% endblock %}
+    <div class="page__container container {{ containerClasses }}">
+        <div class="grid">
+            <div class="grid__col col-{{ pageWidthCols if pageWidthCols else "8" }}@m">
+                <main id="main-content" class="page__main {{ pageClasses }}">
+                    {% block main %}{% endblock %}
+                </main>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bodyEnd %}
+    <script src="{{ pageInfo.rootPath }}/scripts/index.js"></script>
+{% endblock %}

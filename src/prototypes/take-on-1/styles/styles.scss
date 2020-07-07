@@ -1,0 +1,142 @@
+// Remove white background for small checkbox label (password version)
+.to-u-bg::before {
+  background: none !important;
+}
+
+.to-u-bg-w {
+  background-color: #ffffff;
+}
+
+.panel--group {
+  border: 1px solid #888888;
+}
+
+.to-action-th {
+  width: 30%;
+}
+
+// Bar chart element
+.to-u-bar {
+  background-color: #1d70b8;
+  display: inline-block;
+  padding: 0px 0;
+  margin: 0 0 0 0;
+}
+
+.to-column-question-code {
+  width: 15%;
+}
+.to-column-question-label {
+  width: 30%;
+}
+.to-column-question-response {
+  width: 15%;
+}
+.to-column-question-status {
+  width: 25%;
+}
+.to-column-question-action {
+  width: 15%;
+}
+
+.to-u-bar-grid {
+  background-color: #1d70b8;
+  display: block;
+  padding: 0;
+  height: 30px;
+  margin: 0px 0 0px 0;
+}
+
+.to-u-bar-warning {
+  background-color: #d0021b;
+}
+
+.to-value-positive {
+  color: #0f8243;
+}
+
+.to-value-negative {
+  color: #d0021b;
+}
+
+.to-u-cell-barchart {
+  vertical-align: middle;
+  width: 70%;
+}
+
+.t_period_chart_col {
+  width: 50%;
+}
+
+.to-u-current {
+  font-weight: bold;
+}
+
+.to-u-period {
+  width: 20%;
+}
+
+.to-u-amount {
+  width: 10%;
+  text-align: right;
+}
+
+.to-u-row-year .table__cell {
+  border-bottom: 2px solid #595959;
+}
+
+.to-u-grid {
+  width: auto;
+}
+
+table.to-u-grid tr:nth-child(4) td.to-u-year1 {
+  font-weight: bold;
+}
+
+.panel--error .fieldset + .field,
+.panel--info .fieldset + .field {
+  margin-top: 0.2rem;
+}
+
+.to-u-radios-pair {
+  .radios__item {
+    min-width: 1em;
+  }
+  .radio__label {
+    padding-left: 1.8rem;
+  }
+  .radio__label:before {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .radio__input {
+    left: 0;
+  }
+  .radio__input:checked + .radio__label:before {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+  }
+}
+
+.to-u-bg-warning {
+  background-color: #ff0000;
+}
+
+.to-validation {
+  font-weight: 600;
+  color: #d0021b;
+}
+
+/* TEMPORARY FIX FOR ACTIVE TAB BOTTOM NOT WHITE */
+.tab--row[aria-selected='true']:after {
+  bottom: -2px;
+  height: 2px;
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}

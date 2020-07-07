@@ -1,0 +1,184 @@
+---
+title: Take-on
+group: Take-on
+version: 14.2.1
+layout: take-on-1/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/lists/_macro.njk" import onsList %}
+
+{% block main %}
+
+<h1>
+  Take on prototypes and design tests
+</h1>
+
+<h2>
+  v3 prototypes: Historic Data LU-6785
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/v3/questionlist-rsi.html',
+                "text": 'RSI - Question List '
+            },
+            {
+                "url": '/prototypes/take-on-1/v3/questionlist-bmi.html',
+                "text": 'BMI - Question List '
+            }
+
+        ]
+    })
+}}
+
+<h2>
+  v2 prototype: in development
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/v2/rsi-form-json-test-1.html',
+                "text": 'JSON test'
+            }
+
+        ]
+    })
+}}
+
+<h2>
+  v1 prototype: to be tested with RSI users
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/v1/bpm-portal.html',
+                "text": 'BPM portal start'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/email.html',
+                "text": 'Email'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/rsi-form-errors-1.html',
+                "text": 'Form with errors'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/rsi-form-errors-1-override.html',
+                "text": 'Form overridden'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/rsi-form-errors-1-with-history.html',
+                "text": 'Historic data'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/status-messages.html',
+                "text": 'All status messages'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/form-all-validation-messages.html',
+                "text": 'All validation messages'
+            },
+            {
+                "url": '/prototypes/take-on-1/v1/rsi-form-errors-table-test.html',
+                "text": 'Alternative form display'
+            }
+        ]
+    })
+}}
+
+<h2>
+  v0 prototype: tested with BMI users
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/v0/form-with-data-history-1.html',
+                "text": 'Sketch - showing data history 1'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/form-with-validation.html',
+                "text": 'Form with validations NOT overridden'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/form-with-validation-part.html',
+                "text": 'Form with validations some overridden'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/form-with-validation-overridden.html',
+                "text": 'Form with validations ALL overridden'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/status-messages.html',
+                "text": 'Status messages'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/form-all-validation-messages.html',
+                "text": 'Validation messages'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/override-box.html',
+                "text": 'Temporary layout for override if needed'
+            },
+            {
+                "url": '/prototypes/take-on-1/v0/search-choice.html',
+                "text": 'Search choice'
+            }
+        ]
+    })
+}}
+
+<h2>
+  Sample pages for sprint 47
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/form-multiple-overrides-v1.html',
+                "text": 'Form with multiple overrides rough design 1'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-status-text.html',
+                "text": 'Form head status text samples'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-opt1.html',
+                "text": 'Form head option 1 - H1'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-opt1a.html',
+                "text": 'Form head option 1a - H1 order change'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-opt2.html',
+                "text": 'Form head option 2 - metadata DL'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-opt3.html',
+                "text": 'Form head option 3 - metadata DL - reverse font weight'
+            },
+            {
+                "url": '/prototypes/take-on-1/form-head-opt-final.html',
+                "text": 'Form head option - draft final'
+            }
+        ]
+    })
+}}
+
+
+{% endblock %}

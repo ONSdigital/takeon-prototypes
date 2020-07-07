@@ -1,0 +1,106 @@
+{% set questions =
+
+[
+ {
+   "Number": "Q146",
+   "Question": "Comment on the figures included in your return",
+   "Response": "1",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q147",
+   "Question": "New pits or quarries brought into use since date of last return",
+   "Response": "1",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q601",
+   "Question": "Sand produced for asphalt (asphalting sand)",
+   "Response": "176,100",
+   "Adjusted": "",
+   "Status": "Validations",
+   "Action": "No",
+   "ValidationMessages": ["Value is larger than expected.","This has changed significantly since the last submission"]
+ },
+ {
+   "Number": "Q602",
+   "Question": "Sand produced for use in mortar (building or soft sand)",
+   "Response": "123,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q603",
+   "Question": "Sand produced for concreting (sharp sand)",
+   "Response": "56,000",
+   "Adjusted": "",
+   "Status": "Validations",
+   "Action": "No",
+   "ValidationMessages": ["This has changed by a significant percentage since the last submission"]
+ },
+ {
+   "Number": "Q604",
+   "Question": "Gravel coated with bituminous binder (on or off site)",
+   "Response": "345,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q605",
+   "Question": "Gravel produced for concrete aggregate (including sand/gravel mixes)",
+   "Response": "345,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q606",
+   "Question": "Other screened and graded gravels",
+   "Response": "15,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q607",
+   "Question": "Sand and gravel used for constructional fill",
+   "Response": "12,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q608",
+   "Question": "Total",
+   "Response": "1,345,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q9001",
+   "Question": "Automatically calculated total",
+   "Response": "1,345,000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ }
+
+]
+
+%}
